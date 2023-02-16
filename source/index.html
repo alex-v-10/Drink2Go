@@ -1,14 +1,120 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
 
-    <script src="./js/script.js" defer></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Drink2Go</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page__body">
+  <header class="header">
+    <a class="header__logo">
+      <picture>
+        <source>
+        <img>
+      </picture>
+    </a>
+    <span class="header__description">Интернет-магазин кофейных напитков</span>
+    <nav class="header__navigation navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a class="navigation__link">
+            <span class="visually-hidden">Аккаунт</span>
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link">
+            <span class="visually-hidden">Корзина</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="navigation__list menu">
+        <li class="navigation__item">
+          <a class="navigation__link navigation__link--current">Главная</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Каталог</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Доставка</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">О нас</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page__main">
+    <h1>Интернет-магазин кофейных напитков Drink2Go</h1>
+    <section class="slider">
+      <button class="slider__button slider__button--left"></button>
+      <ul class="slider__list">
+        <li class="slider__item">
+          <picture>
+            <source>
+            <img>
+          </picture>
+          <div class="slider__content">
+            <p class="slider__badge badge">Новинка!</p>
+            <h2 class="slider__title">Декаф Флэт Уайт</h2>
+            <p class="slider__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком —
+              то, что нужно для расслабления после тяжёлого рабочего дня</p>
+            <div class="slider__buy">
+              <span class="slider__old-price">295₽</span>
+              <span class="slider__price">225₽</span>
+              <button class="slider__button"></button>
+            </div>
+          </div>
+        </li>
+        <li class="slider__item"></li>
+        <li class="slider__item"></li>
+      </ul>
+      <button class="slider__button slider__button--right">Заказать</button>
+    </section>
+    <section class="features">
+      <p class="features__badge badge">Преимущества</p>
+      <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
+      <ul class="features__list">
+        <li class="features__item">
+          <svg class="features__icon" width="46" height="52" fill="currentColor" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#features-icon"></use>
+          </svg>
+          <h3 class="features__title">Скорость</h3>
+          <p class="features__description">Готовый напиток всегда под рукой — просто открой банку</p>
+        </li>
+        <li class="features__item">
+          <svg class="features__icon" width="46" height="52" fill="currentColor" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#features-icon"></use>
+          </svg>
+          <h3 class="features__title">Удобство</h3>
+          <p class="features__description">Легко помещается и в карман, и в маленькую сумочку</p>
+        </li>
+        <li class="features__item">
+          <svg class="features__icon" width="46" height="52" fill="currentColor" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#features-icon"></use>
+          </svg>
+          <h3 class="features__title">Бодрость</h3>
+          <p class="features__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+        </li>
+        <li class="features__item">
+          <svg class="features__icon" width="46" height="52" fill="currentColor" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#features-icon"></use>
+          </svg>
+          <h3 class="features__title">Экологичность</h3>
+          <p class="features__description">Вся упаковка сделана из перерабатываемых материалов</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    Footer
+  </footer>
+  <script src="./js/script.js" defer></script>
+</body>
+
 </html>
