@@ -8,24 +8,68 @@
 .navigation__link {
   position: relative;
   display: block;
-  width: 60px;
-  height: 60px;
   cursor: pointer;
+  color: $base-black;
+
+  @media (max-width: ($desktop - 0.5px)) {
+    width: 60px;
+    height: 60px;
+  }
+
+  @media (min-width: $tablet) and (max-width: ($desktop - 0.5px)) {
+    height: 80px;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+    padding: 32px 20px;
+    margin-left: 20px;
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus {
+    @media (min-width: $desktop) {
+      color: $base-primary;
+    }
+  }
+
+  &:active {
+    background-color: $base-secondary;
+  }
 }
 
-.navigation__link:hover,
-.navigation__link:hover .navigation__icon {
-  color: $base-primary;
-}
-
-.navigation__link:active {
-  background-color: $base-secondary;
+.navigation__text {
+  margin-left: 8px;
 }
 
 .navigation__icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: $base-black;
+  @media (max-width: ($desktop - 0.5px)) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.navigation__item--menu {
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.navigation__menu-button {
+  background-color: $base-white;
+  border: none;
+  padding: 0;
+}
+
+.navigation__icon--opened,
+.navigation__menu-button--active .navigation__icon--closed {
+  display: none;
+}
+
+.navigation__menu-button--active .navigation__icon--opened {
+  display: block;
 }

@@ -16,7 +16,13 @@
 }
 
 .hidden-mobile {
-  @media (max-width: ($tablet - 1px)) {
+  @media (max-width: ($tablet - 0.5px)) {
+    @include visually-hidden;
+  }
+}
+
+.hidden-mobile-tablet {
+  @media (max-width: ($desktop - 0.5px)) {
     @include visually-hidden;
   }
 }

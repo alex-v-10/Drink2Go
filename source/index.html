@@ -7,13 +7,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
   <header class="header container">
-    <a class="header__logo">
+    <a class="header__logo" href="#">
       <picture>
         <source media="(min-width: 1440px)" width="170" height="36" srcset="img/logo/logo-3.svg">
         <source media="(min-width: 768px)" width="82" height="36" srcset="img/logo/logo-2.svg">
@@ -21,45 +21,56 @@
       </picture>
     </a>
     <span class="header__description">Интернет-магазин кофейных напитков</span>
-    <nav class="header__navigation navigation">
+    <nav class="header__navigation navigation navigation--nojs">
       <ul class="navigation__list">
         <li class="navigation__item">
-          <a class="navigation__link">
+          <a class="navigation__link" href="#">
             <svg class="navigation__icon" width="16" height="16" fill="currentColor" aria-hidden="true" focusable="false">
               <use xlink:href="img/icons/stack.svg#user"></use>
             </svg>
-            <span class="hidden-mobile">Аккаунт</span>
+            <span class="navigation__text hidden-mobile-tablet">Аккаунт</span>
           </a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link">
-            <span class="hidden-mobile">Корзина</span>
+          <a class="navigation__link" href="#">
+            <svg class="navigation__icon" width="16" height="16" fill="currentColor" aria-hidden="true" focusable="false">
+              <use xlink:href="img/icons/stack.svg#cart"></use>
+            </svg>
+            <span class="navigation__text hidden-mobile-tablet">Корзина</span>
           </a>
         </li>
-        <li class="navigation__item">
-          <a class="navigation__link">
+        <li class="navigation__item navigation__item--menu">
+          <button class="navigation__menu-button navigation__menu-button--active navigation__link" type="button">
+            <svg class="navigation__icon navigation__icon--opened" width="16" height="16" fill="currentColor" aria-hidden="true" focusable="false">
+              <use xlink:href="img/icons/stack.svg#cross"></use>
+            </svg>
+            <svg class="navigation__icon navigation__icon--closed" width="16" height="16" fill="currentColor" aria-hidden="true" focusable="false">
+              <use xlink:href="img/icons/stack.svg#menu"></use>
+            </svg>
             <span class="visually-hidden">Меню</span>
-          </a>
+          </button>
         </li>
       </ul>
-      <ul class="navigation__list menu hidden-mobile">
-        <li class="navigation__item">
-          <a class="navigation__link navigation__link--current">Главная</a>
+    </nav>
+    <nav class="header__menu menu menu--active">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link menu__link--current">Главная</a>
         </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">Каталог</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Каталог</a>
         </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">Доставка</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Доставка</a>
         </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">О нас</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#">О нас</a>
         </li>
       </ul>
     </nav>
   </header>
   <main class="page__main">
-    <h1>Интернет-магазин кофейных напитков Drink2Go</h1>
+    <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go</h1>
     <section class="slider">
       <button class="slider__button slider__button--left"></button>
       <ul class="slider__list">
