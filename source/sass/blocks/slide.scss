@@ -21,10 +21,18 @@
     flex-direction: row;
     justify-content: center;
   }
-}
 
-.slide--1 {
-  background-color: $flat-white;
+  &--1 {
+    background-color: $flat-white;
+  }
+
+  &--2 {
+    background-color: $lavender-latte;
+  }
+
+  &--3 {
+    background-color: $espresso;
+  }
 }
 
 .slide__image-container {
@@ -92,6 +100,7 @@
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+  z-index: 1;
 
   @media (min-width: $tablet) {
     font-size: 20px;

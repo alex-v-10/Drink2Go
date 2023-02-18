@@ -96,7 +96,7 @@
                 <source media="(min-width: 768px)"
                   srcset="img/slides/slide-1/slide-1-tablet.png 1x, img/slides/slide-1/slide-1-tablet@2x.png 2x">
                 <img class="slide__image" width="280" height="280" src="img/slides/slide-1/slide-1-mobile.png"
-                  srcset="img/slides/slide-1/slide-1-mobile@2x.png 2x" alt="Фото банки Декаф Флэт Уайт." loading="lazy">
+                  srcset="img/slides/slide-1/slide-1-mobile@2x.png 2x" alt="Фото Декаф Флэт Уайт." loading="lazy">
               </picture>
             </div>
             <div class="slide__content">
@@ -112,9 +112,68 @@
             </div>
           </div>
         </div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        ...
+        <div class="swiper-slide">
+          <div class="slide slide--2">
+            <div class="slide__image-container">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/slides/slide-2/slide-2-desktop.webp 1x, img/slides/slide-2/slide-2-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/slides/slide-2/slide-2-tablet.webp 1x, img/slides/slide-2/slide-2-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/slides/slide-2/slide-2-mobile.webp 1x, img/slides/slide-2/slide-2-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)"
+                  srcset="img/slides/slide-2/slide-2-desktop.png 1x, img/slides/slide-2/slide-2-desktop@2x.png 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/slides/slide-2/slide-2-tablet.png 1x, img/slides/slide-2/slide-2-tablet@2x.png 2x">
+                <img class="slide__image" width="280" height="280" src="img/slides/slide-2/slide-2-mobile.png"
+                  srcset="img/slides/slide-2/slide-2-mobile@2x.png 2x" alt="Фото Лавандовый Латте." loading="lazy">
+              </picture>
+            </div>
+            <div class="slide__content">
+              <p class="slide__badge badge">Новинка!</p>
+              <h2 class="slide__title">Лавандовый Латте</h2>
+              <p class="slide__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
+                лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+              <div class="slide__buy">
+                <span class="slide__old-price">285₽</span>
+                <span class="slide__price">265₽</span>
+                <button class="slide__button" type="button">Заказать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide slide--3">
+            <div class="slide__image-container">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/slides/slide-3/slide-3-desktop.webp 1x, img/slides/slide-3/slide-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/slides/slide-3/slide-3-tablet.webp 1x, img/slides/slide-3/slide-3-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/slides/slide-3/slide-3-mobile.webp 1x, img/slides/slide-3/slide-3-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)"
+                  srcset="img/slides/slide-3/slide-3-desktop.png 1x, img/slides/slide-3/slide-3-desktop@2x.png 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/slides/slide-3/slide-3-tablet.png 1x, img/slides/slide-3/slide-3-tablet@2x.png 2x">
+                <img class="slide__image" width="280" height="280" src="img/slides/slide-3/slide-3-mobile.png"
+                  srcset="img/slides/slide-3/slide-3-mobile@2x.png 2x" alt="Фото Тройной Эспрессо." loading="lazy">
+              </picture>
+            </div>
+            <div class="slide__content">
+              <p class="slide__badge badge">Новинка!</p>
+              <h2 class="slide__title">Тройной Эспрессо</h2>
+              <p class="slide__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из
+                Колумбии покажет вам, что такое настоящая бодрость</p>
+              <div class="slide__buy">
+                <span class="slide__old-price">395₽</span>
+                <span class="slide__price">375₽</span>
+                <button class="slide__button" type="button">Заказать</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- If we need pagination -->
       <div class="swiper-pagination"></div>
@@ -122,9 +181,6 @@
       <!-- If we need navigation buttons -->
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
-
-      <!-- If we need scrollbar -->
-      <!-- <div class="swiper-scrollbar"></div> -->
     </div>
     <section class="features">
       <p class="features__badge badge">Преимущества</p>
