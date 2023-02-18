@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -25,7 +26,8 @@
       <ul class="navigation__list">
         <li class="navigation__item">
           <a class="navigation__link" href="#">
-            <svg class="navigation__icon" width="16" height="16" fill="currentColor" aria-hidden="true" focusable="false">
+            <svg class="navigation__icon" width="16" height="16" fill="currentColor" aria-hidden="true"
+              focusable="false">
               <use xlink:href="img/icons/stack.svg#user"></use>
             </svg>
             <span class="navigation__text hidden-mobile-tablet">Аккаунт</span>
@@ -33,7 +35,8 @@
         </li>
         <li class="navigation__item">
           <a class="navigation__link" href="#">
-            <svg class="navigation__icon" width="16" height="16" fill="currentColor" aria-hidden="true" focusable="false">
+            <svg class="navigation__icon" width="16" height="16" fill="currentColor" aria-hidden="true"
+              focusable="false">
               <use xlink:href="img/icons/stack.svg#cart"></use>
             </svg>
             <span class="navigation__text hidden-mobile-tablet">Корзина</span>
@@ -41,10 +44,12 @@
         </li>
         <li class="navigation__item navigation__item--menu">
           <button class="navigation__menu-button navigation__menu-button--active navigation__link" type="button">
-            <svg class="navigation__icon navigation__icon--opened" width="16" height="16" fill="currentColor" aria-hidden="true" focusable="false">
+            <svg class="navigation__icon navigation__icon--opened" width="16" height="16" fill="currentColor"
+              aria-hidden="true" focusable="false">
               <use xlink:href="img/icons/stack.svg#cross"></use>
             </svg>
-            <svg class="navigation__icon navigation__icon--closed" width="16" height="16" fill="currentColor" aria-hidden="true" focusable="false">
+            <svg class="navigation__icon navigation__icon--closed" width="16" height="16" fill="currentColor"
+              aria-hidden="true" focusable="false">
               <use xlink:href="img/icons/stack.svg#menu"></use>
             </svg>
             <span class="visually-hidden">Меню</span>
@@ -71,31 +76,56 @@
   </header>
   <main class="page__main">
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go</h1>
-    <section class="slider">
-      <button class="slider__button slider__button--left"></button>
-      <ul class="slider__list">
-        <li class="slider__item">
-          <picture>
-            <source>
-            <img>
-          </picture>
-          <div class="slider__content">
-            <p class="slider__badge badge">Новинка!</p>
-            <h2 class="slider__title">Декаф Флэт Уайт</h2>
-            <p class="slider__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком —
-              то, что нужно для расслабления после тяжёлого рабочего дня</p>
-            <div class="slider__buy">
-              <span class="slider__old-price">295₽</span>
-              <span class="slider__price">225₽</span>
-              <button class="slider__button"></button>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="slide slide--1">
+            <div class="slide__image-container">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/slides/slide-1/slide-1-desktop.webp 1x, img/slides/slide-1/slide-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/slides/slide-1/slide-1-tablet.webp 1x, img/slides/slide-1/slide-1-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/slides/slide-1/slide-1-mobile.webp 1x, img/slides/slide-1/slide-1-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)"
+                  srcset="img/slides/slide-1/slide-1-desktop.png 1x, img/slides/slide-1/slide-1-desktop@2x.png 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/slides/slide-1/slide-1-tablet.png 1x, img/slides/slide-1/slide-1-tablet@2x.png 2x">
+                <img class="slide__image" width="280" height="280" src="img/slides/slide-1/slide-1-mobile.png"
+                  srcset="img/slides/slide-1/slide-1-mobile@2x.png 2x" alt="Фото банки Декаф Флэт Уайт." loading="lazy">
+              </picture>
+            </div>
+            <div class="slide__content">
+              <p class="slide__badge badge">Новинка!</p>
+              <h2 class="slide__title">Декаф Флэт Уайт</h2>
+              <p class="slide__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+              <div class="slide__buy">
+                <span class="slide__old-price">295₽</span>
+                <span class="slide__price">225₽</span>
+                <button class="slide__button" type="button">Заказать</button>
+              </div>
             </div>
           </div>
-        </li>
-        <li class="slider__item"></li>
-        <li class="slider__item"></li>
-      </ul>
-      <button class="slider__button slider__button--right">Заказать</button>
-    </section>
+        </div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        ...
+      </div>
+      <!-- If we need pagination -->
+      <!-- <div class="swiper-pagination"></div> -->
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
     <section class="features">
       <p class="features__badge badge">Преимущества</p>
       <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
@@ -134,6 +164,7 @@
   <footer>
     Footer
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
   <script src="./js/script.js" defer></script>
 </body>
 

@@ -10,8 +10,6 @@
 
 .header__description {
   display: none;
-  font-size: 12px;
-  line-height: 16px;
 
   @media (min-width: $desktop) {
     display: block;
