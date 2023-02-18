@@ -1,0 +1,42 @@
+.features {
+  padding-top: 50px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.features__main-title {
+  margin: 4px 0 36px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.features__list {
+  display: grid;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.features__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features__title {
+  margin: 10px 0 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.features__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+}

@@ -52,7 +52,9 @@
   }
 
   &--current {
-    color: $base-primary;
+    @media (min-width: $tablet) {
+      color: $base-primary;
+    }
   }
 
   &--current::before {
