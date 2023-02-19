@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -239,12 +239,12 @@
         <p class="title__badge">Каталог</p>
         <h2 class="title__text">Каталог кофейных напитков</h2>
       </div>
-      <div class="catalog__filters filters">
-        <fieldset class="filters__set">
-          <legend class="filters__title">Цена</legend>
+      <div class="catalog__filter filter">
+        <fieldset class="filter__set">
+          <legend class="filter__title">Цена</legend>
           <div class="filter__range">
             <div class="range">
-              <div class="range__bar" style="left: 0; width: 237px;">
+              <div class="range__bar" style="left: 0; right: 20px;">
                 <button class="range__button range__button--min" type="button">
                   <span class="visually-hidden">Изменить минимальную цену.</span>
                 </button>
@@ -254,18 +254,53 @@
               </div>
             </div>
           </div>
-          <div class="filters__number-container">
-            <label class="filters__label">
+          <div class="filter__number-range number-range">
+            <label>
               <span class="visually-hidden">от</span>
-              <input class="filters__number" type="number" id="min-price" name="min-price" value="0">
+              <input class="number-range__input number-range__input--zero" type="number" id="min-price" name="min-price"
+                value="0">
             </label>
-            <label class="filters__label">
+            <div class="number-range__dash"></div>
+            <label>
               <span class="visually-hidden">до</span>
-              <input class="filters__number" type="number" id="max-price" name="max-price" value="900">
+              <input class="number-range__input" type="number" id="max-price" name="max-price" value="900">
             </label>
           </div>
         </fieldset>
       </div>
+      <fieldset class="filter__set">
+        <legend class="filter__title">Наличие молока</legend>
+        <ul class="filter__list">
+          <li class="filter__item">
+            <label class="control">
+              <input class="control__input visually-hidden" type="radio" name="milk" value="doesnt-matter" checked>
+              <span class="control__mark control__mark--checkbox"></span>
+              <span class="control__text">Неважно</span>
+            </label>
+          </li>
+          <li class="filter__item">
+            <label class="control">
+              <input class="control__input visually-hidden" type="radio" name="milk" value="animal-only">
+              <span class="control__mark control__mark--checkbox"></span>
+              <span class="control__text">Только животное</span>
+            </label>
+          </li>
+          <li class="filter__item">
+            <label class="control">
+              <input class="control__input visually-hidden" type="radio" name="milk" value="only-vegetable">
+              <span class="control__mark control__mark--checkbox"></span>
+              <span class="control__text">Только растительное</span>
+            </label>
+          </li>
+          <li class="filter__item">
+            <label class="control">
+              <input class="control__input visually-hidden" type="radio" name="milk" value="without-milk" disabled>
+              <span class="control__mark control__mark--checkbox"></span>
+              <span class="control__text">Без молока</span>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
       <div class="catalog__cards cards"></div>
     </section>
   </main>

@@ -1,0 +1,71 @@
+.control {
+  position: relative;
+  padding-left: 34px;
+  cursor: pointer;
+}
+
+.control__mark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.control__mark--checkbox {
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border: 2px solid $base-grey;
+  border-radius: 50%;
+}
+
+.control__input[type="radio"] + .control__mark--checkbox::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+/* Conditions for checkbox */
+
+.control__input[type="radio"]:checked + .control__mark--checkbox {
+  border-color: $base-primary;
+}
+
+.control__input[type="radio"]:checked + .control__mark--checkbox::before {
+  background-color: $base-primary;
+}
+
+/* Hover / Focus */
+
+.control:hover > .control__mark--checkbox,
+.control__input[type="radio"]:focus-visible + .control__mark--checkbox {
+  border-color: $primary-lighter;
+}
+
+.control:hover > .control__mark--checkbox::before,
+.control__input[type="radio"]:focus-visible + .control__mark--checkbox::before {
+  background-color: $primary-opacity;
+}
+
+/* Disabled */
+
+.control__input:disabled ~ .control__text {
+  color: $base-grey;
+}
+
+.control__input[type="radio"]:disabled + .control__mark--checkbox {
+  border-color: $light-grey;
+}
+
+.control__input[type="radio"]:disabled + .control__mark--checkbox::before {
+  background-color: transparent;
+}
+
+.control__input[type="radio"]:checked:disabled + .control__mark--checkbox::before {
+  background-color: $light-grey;
+}

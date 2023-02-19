@@ -1,0 +1,33 @@
+.filter__set {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 16px;
+  line-height: 24px;
+
+  &:not(:first-child) {
+    margin-top: 24px;
+  }
+}
+
+.filter__title {
+  font-weight: 600;
+}
+
+.filter__range {
+  margin-top: 32px;
+}
+
+.filter__number-range {
+  margin-top: 35px;
+}
+
+.filter__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter__item {
+  margin-top: 23px;
+}

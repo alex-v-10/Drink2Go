@@ -1,0 +1,29 @@
+.number-range {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.number-range__input {
+  width: 118px;
+  box-sizing: border-box;
+  padding: 7px 10px;
+  border: 2px solid $primary-lighter;
+  border-radius: 4px;
+  background-color: $base-white;
+  text-align: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  &--zero {
+    color: $base-grey;
+  }
+}
+
+.number-range__dash {
+  width: 9px;
+  height: 2px;
+  background-color: $base-grey;
+}
