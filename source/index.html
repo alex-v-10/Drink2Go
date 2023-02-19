@@ -239,7 +239,7 @@
         <p class="title__badge">Каталог</p>
         <h2 class="title__text">Каталог кофейных напитков</h2>
       </div>
-      <div class="catalog__filter filter">
+      <form class="catalog__filter filter" action="https://echo.htmlacademy.ru/" method="get">
         <fieldset class="filter__set">
           <legend class="filter__title">Цена</legend>
           <div class="filter__range">
@@ -267,40 +267,80 @@
             </label>
           </div>
         </fieldset>
-      </div>
-      <fieldset class="filter__set">
-        <legend class="filter__title">Наличие молока</legend>
-        <ul class="filter__list">
-          <li class="filter__item">
-            <label class="control">
-              <input class="control__input visually-hidden" type="radio" name="milk" value="doesnt-matter" checked>
-              <span class="control__mark control__mark--radio"></span>
-              <span class="control__text">Неважно</span>
-            </label>
-          </li>
-          <li class="filter__item">
-            <label class="control">
-              <input class="control__input visually-hidden" type="radio" name="milk" value="animal-only">
-              <span class="control__mark control__mark--radio"></span>
-              <span class="control__text">Только животное</span>
-            </label>
-          </li>
-          <li class="filter__item">
-            <label class="control">
-              <input class="control__input visually-hidden" type="radio" name="milk" value="only-vegetable">
-              <span class="control__mark control__mark--radio"></span>
-              <span class="control__text">Только растительное</span>
-            </label>
-          </li>
-          <li class="filter__item">
-            <label class="control">
-              <input class="control__input visually-hidden" type="radio" name="milk" value="without-milk" disabled>
-              <span class="control__mark control__mark--radio"></span>
-              <span class="control__text">Без молока</span>
-            </label>
-          </li>
-        </ul>
-      </fieldset>
+        <fieldset class="filter__set">
+          <legend class="filter__title">Наличие молока</legend>
+          <ul class="filter__list">
+            <li class="filter__item">
+              <label class="control">
+                <input class="control__input visually-hidden" type="radio" name="milk" value="doesnt matter" checked>
+                <span class="control__mark control__mark--radio"></span>
+                <span class="control__text">Неважно</span>
+              </label>
+            </li>
+            <li class="filter__item">
+              <label class="control">
+                <input class="control__input visually-hidden" type="radio" name="milk" value="animal only">
+                <span class="control__mark control__mark--radio"></span>
+                <span class="control__text">Только животное</span>
+              </label>
+            </li>
+            <li class="filter__item">
+              <label class="control">
+                <input class="control__input visually-hidden" type="radio" name="milk" value="only vegetable">
+                <span class="control__mark control__mark--radio"></span>
+                <span class="control__text">Только растительное</span>
+              </label>
+            </li>
+            <li class="filter__item">
+              <label class="control">
+                <input class="control__input visually-hidden" type="radio" name="milk" value="without milk" disabled>
+                <span class="control__mark control__mark--radio"></span>
+                <span class="control__text">Без молока</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter__set">
+          <legend class="filter__title">Страна произрастания</legend>
+          <ul class="filter__list">
+            <li class="filter__item">
+              <label class="control control--checkbox">
+                <input class="control__input visually-hidden" type="checkbox" name="Brazil" checked>
+                <span class="control__mark control__mark--checkbox"></span>
+                <span class="control__text">Бразилия</span>
+              </label>
+            </li>
+            <li class="filter__item">
+              <label class="control control--checkbox">
+                <input class="control__input visually-hidden" type="checkbox" name="Ethiopia">
+                <span class="control__mark control__mark--checkbox"></span>
+                <span class="control__text">Эфиопия</span>
+              </label>
+            </li>
+            <li class="filter__item">
+              <label class="control control--checkbox">
+                <input class="control__input visually-hidden" type="checkbox" name="Colombia">
+                <span class="control__mark control__mark--checkbox"></span>
+                <span class="control__text">Колумбия</span>
+              </label>
+            </li>
+            <li class="filter__item">
+              <label class="control control--checkbox">
+                <input class="control__input visually-hidden" type="checkbox" name="Costa Rica">
+                <span class="control__mark control__mark--checkbox"></span>
+                <span class="control__text">Коста-Рика</span>
+              </label>
+            </li>
+            <li class="filter__item">
+              <label class="control control--checkbox">
+                <input class="control__input visually-hidden" type="checkbox" name="Peru" disabled>
+                <span class="control__mark control__mark--checkbox"></span>
+                <span class="control__text">Перу</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </form>
       <div class="catalog__cards cards"></div>
     </section>
   </main>

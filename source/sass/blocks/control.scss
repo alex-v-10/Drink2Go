@@ -2,6 +2,10 @@
   position: relative;
   padding-left: 34px;
   cursor: pointer;
+
+  &--checkbox {
+    padding-left: 52px;
+  }
 }
 
 .control__mark {
@@ -19,7 +23,7 @@
   border-radius: 50%;
 }
 
-.control__input[type="radio"] + .control__mark--radio::before {
+.control__mark--radio::before {
   content: "";
   position: absolute;
   width: 16px;
@@ -30,25 +34,37 @@
   border-radius: 50%;
 }
 
+.control__mark--checkbox {
+  box-sizing: border-box;
+  width: 42px;
+  height: 24px;
+  border: none;
+  border-radius: 12px;
+  background-color: $base-grey;
+}
+
+.control__mark--checkbox::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 2px;
+  top: 2px;
+  background-color: $base-white;
+  border-radius: 50%;
+}
+
 /* Conditions for radio */
-
-.control__input[type="radio"]:checked + .control__mark--radio {
-  border-color: $base-primary;
-}
-
-.control__input[type="radio"]:checked + .control__mark--radio::before {
-  background-color: $base-primary;
-}
 
 /* Hover / Focus */
 
 .control:hover > .control__mark--radio,
-.control__input[type="radio"]:focus-visible + .control__mark--radio {
+.control__input:focus-visible + .control__mark--radio {
   border-color: $primary-lighter;
 }
 
 .control:hover > .control__mark--radio::before,
-.control__input[type="radio"]:focus-visible + .control__mark--radio::before {
+.control__input:focus-visible + .control__mark--radio::before {
   background-color: $primary-opacity;
 }
 
@@ -58,16 +74,61 @@
   color: $base-grey;
 }
 
-.control__input[type="radio"]:disabled + .control__mark--radio {
+.control__input:disabled + .control__mark--radio,
+.control__input:disabled:checked + .control__mark--radio {
   border-color: $light-grey;
 }
 
-.control__input[type="radio"]:disabled + .control__mark--radio::before {
+.control__input:disabled + .control__mark--radio::before {
   background-color: transparent;
 }
 
-.control__input[type="radio"]:checked:disabled + .control__mark--radio::before {
+.control__input:disabled:checked + .control__mark--radio::before {
   background-color: $light-grey;
 }
 
+/* Checked */
+
+.control__input:checked + .control__mark--radio {
+  border-color: $base-primary;
+}
+
+.control__input:checked + .control__mark--radio::before {
+  background-color: $base-primary;
+}
+
 /* Conditions for checkbox */
+
+/* Hover / Focus */
+
+.control:hover > .control__mark--checkbox,
+.control__input:focus-visible + .control__mark--checkbox {
+  border-color: $primary-lighter;
+  background-color: $primary-opacity;
+}
+
+/* Disabled */
+
+.control__input:disabled + .control__mark--checkbox,
+.control__input:disabled:checked + .control__mark--checkbox  {
+  background-color: $light-grey;
+}
+
+.control__input:disabled + .control__mark--checkbox::before {
+  background-color: $lightest-grey;
+}
+
+.control__input:disabled:checked + .control__mark--checkbox::before {
+  background-color: $base-grey;
+}
+
+/* Checked */
+
+.control__input:checked + .control__mark--checkbox {
+  background-color: $base-primary;
+}
+
+.control__input:checked + .control__mark--checkbox::before {
+  left: auto;
+  right: 2px;
+}
