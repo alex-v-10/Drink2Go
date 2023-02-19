@@ -21,6 +21,7 @@
   height: 24px;
   border: 2px solid $base-grey;
   border-radius: 50%;
+  background-color: $base-white;
 }
 
 .control__mark--radio::before {
@@ -38,7 +39,7 @@
   box-sizing: border-box;
   width: 42px;
   height: 24px;
-  border: none;
+  border: 2px solid $base-grey;
   border-radius: 12px;
   background-color: $base-grey;
 }
@@ -48,8 +49,8 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 2px;
-  top: 2px;
+  left: 1px;
+  top: 0.5px;
   background-color: $base-white;
   border-radius: 50%;
 }
@@ -103,14 +104,15 @@
 
 .control:hover > .control__mark--checkbox,
 .control__input:focus-visible + .control__mark--checkbox {
-  border-color: $primary-lighter;
+  border: 2px solid $primary-lighter;
   background-color: $primary-opacity;
 }
 
 /* Disabled */
 
 .control__input:disabled + .control__mark--checkbox,
-.control__input:disabled:checked + .control__mark--checkbox  {
+.control__input:disabled:checked + .control__mark--checkbox {
+  border-color: $light-grey;
   background-color: $light-grey;
 }
 
@@ -125,10 +127,11 @@
 /* Checked */
 
 .control__input:checked + .control__mark--checkbox {
+  border-color: $base-primary;
   background-color: $base-primary;
 }
 
 .control__input:checked + .control__mark--checkbox::before {
   left: auto;
-  right: 2px;
+  right: 1px;
 }
