@@ -101,8 +101,10 @@
               </picture>
             </div>
             <div class="slide__content">
-              <p class="slide__badge text-badge">Новинка!</p>
-              <h2 class="slide__title">Декаф Флэт Уайт</h2>
+              <div class="slide__title title">
+                <p class="title__badge">Новинка!</p>
+                <h2 class="title__text">Декаф Флэт Уайт</h2>
+              </div>
               <p class="slide__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком
                 — то, что нужно для расслабления после тяжёлого рабочего дня</p>
               <div class="slide__buy">
@@ -132,8 +134,10 @@
               </picture>
             </div>
             <div class="slide__content">
-              <p class="slide__badge badge">Новинка!</p>
-              <h2 class="slide__title">Лавандовый Латте</h2>
+              <div class="slide__title title">
+                <p class="title__badge">Новинка!</p>
+                <h2 class="title__text">Лавандовый Латте</h2>
+              </div>
               <p class="slide__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
                 лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
               <div class="slide__buy">
@@ -163,8 +167,10 @@
               </picture>
             </div>
             <div class="slide__content">
-              <p class="slide__badge badge">Новинка!</p>
-              <h2 class="slide__title">Тройной Эспрессо</h2>
+              <div class="slide__title title">
+                <p class="title__badge">Новинка!</p>
+                <h2 class="title__text">Тройной Эспрессо</h2>
+              </div>
               <p class="slide__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из
                 Колумбии покажет вам, что такое настоящая бодрость</p>
               <div class="slide__buy">
@@ -178,45 +184,89 @@
       </div>
       <!-- If we need pagination -->
       <div class="swiper-pagination"></div>
-
       <!-- If we need navigation buttons -->
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
     <!--? Features -->
     <section class="features container">
-      <p class="features__badge text-badge">Преимущества</p>
-      <h2 class="features__main-title">Главные причины выбрать Drink2Go</h2>
+      <div class="features__main-title title">
+        <p class="title__badge">Преимущества</p>
+        <h2 class="title__text">Главные причины выбрать Drink2Go</h2>
+      </div>
       <ul class="features__list">
         <li class="features__item">
           <svg class="features__icon" width="52" height="56" aria-hidden="true" focusable="false">
             <use xlink:href="img/icons/stack.svg#watch"></use>
           </svg>
-          <h3 class="features__title">Скорость</h3>
-          <p class="features__description">Готовый напиток всегда под рукой — просто открой банку</p>
+          <div class="features__text-container">
+            <h3 class="features__title">Скорость</h3>
+            <p class="features__description">Готовый напиток всегда под рукой — просто открой банку</p>
+          </div>
         </li>
         <li class="features__item">
           <svg class="features__icon" width="52" height="56" aria-hidden="true" focusable="false">
             <use xlink:href="img/icons/stack.svg#comfort"></use>
           </svg>
-          <h3 class="features__title">Удобство</h3>
-          <p class="features__description">Легко помещается и в карман, и в маленькую сумочку</p>
+          <div class="features__text-container">
+            <h3 class="features__title">Удобство</h3>
+            <p class="features__description">Легко помещается и в карман, и в маленькую сумочку</p>
+          </div>
         </li>
         <li class="features__item">
           <svg class="features__icon" width="52" height="56" aria-hidden="true" focusable="false">
             <use xlink:href="img/icons/stack.svg#lightning"></use>
           </svg>
-          <h3 class="features__title">Бодрость</h3>
-          <p class="features__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+          <div class="features__text-container">
+            <h3 class="features__title">Бодрость</h3>
+            <p class="features__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+          </div>
         </li>
         <li class="features__item">
           <svg class="features__icon" width="52" height="56" aria-hidden="true" focusable="false">
             <use xlink:href="img/icons/stack.svg#leaf"></use>
           </svg>
-          <h3 class="features__title">Экологичность</h3>
-          <p class="features__description">Вся упаковка сделана из перерабатываемых материалов</p>
+          <div class="features__text-container">
+            <h3 class="features__title">Экологичность</h3>
+            <p class="features__description">Вся упаковка сделана из перерабатываемых материалов</p>
+          </div>
         </li>
       </ul>
+    </section>
+    <!--? Catalog -->
+    <section class="catalog container">
+      <div class="catalog__title title">
+        <p class="title__badge">Каталог</p>
+        <h2 class="title__text">Каталог кофейных напитков</h2>
+      </div>
+      <div class="catalog__filters filters">
+        <fieldset class="filters__set">
+          <legend class="filters__title">Цена</legend>
+          <div class="filter__range">
+            <div class="range">
+              <div class="range__bar" style="left: 0; width: 237px;">
+                <button class="range__button range__button--min" type="button">
+                  <span class="visually-hidden">Изменить минимальную цену.</span>
+                </button>
+                <button class="range__button range__button--max" type="button">
+                  <span class="visually-hidden">Изменить максимальную цену.</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="filters__number-container">
+            <label class="filters__label">
+              <span class="visually-hidden">от</span>
+              <input class="filters__number" type="number" id="min-price" name="min-price" value="0">
+            </label>
+            <label class="filters__label">
+              <span class="visually-hidden">до</span>
+              <input class="filters__number" type="number" id="max-price" name="max-price" value="900">
+            </label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="catalog__cards cards"></div>
     </section>
   </main>
   <footer>
