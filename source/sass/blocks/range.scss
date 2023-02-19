@@ -3,6 +3,14 @@
   width: 100%;
   height: 2px;
   background-color: $light-grey;
+
+  &--disabled .range__bar {
+    background-color: $base-grey;
+  }
+
+  &--disabled .range__button {
+    border-color: $base-grey;
+  }
 }
 
 .range__bar {
@@ -32,4 +40,28 @@
   &--max {
     right: 0;
   }
+}
+
+.range__button::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.range:not(.range--disabled) .range__button:hover::before,
+.range__button:focus-visible::before {
+  background-color: $primary-opacity;
+}
+
+.range:not(.range--disabled) .range__button:active {
+  border-color: $base-primary;
+}
+
+.range:not(.range--disabled) .range__button:active::before {
+  background-color: $base-primary;
 }

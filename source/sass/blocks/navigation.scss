@@ -29,7 +29,7 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     @media (min-width: $desktop) {
       color: $base-primary;
     }

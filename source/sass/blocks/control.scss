@@ -11,7 +11,7 @@
   transform: translateY(-50%);
 }
 
-.control__mark--checkbox {
+.control__mark--radio {
   box-sizing: border-box;
   width: 24px;
   height: 24px;
@@ -19,7 +19,7 @@
   border-radius: 50%;
 }
 
-.control__input[type="radio"] + .control__mark--checkbox::before {
+.control__input[type="radio"] + .control__mark--radio::before {
   content: "";
   position: absolute;
   width: 16px;
@@ -30,25 +30,25 @@
   border-radius: 50%;
 }
 
-/* Conditions for checkbox */
+/* Conditions for radio */
 
-.control__input[type="radio"]:checked + .control__mark--checkbox {
+.control__input[type="radio"]:checked + .control__mark--radio {
   border-color: $base-primary;
 }
 
-.control__input[type="radio"]:checked + .control__mark--checkbox::before {
+.control__input[type="radio"]:checked + .control__mark--radio::before {
   background-color: $base-primary;
 }
 
 /* Hover / Focus */
 
-.control:hover > .control__mark--checkbox,
-.control__input[type="radio"]:focus-visible + .control__mark--checkbox {
+.control:hover > .control__mark--radio,
+.control__input[type="radio"]:focus-visible + .control__mark--radio {
   border-color: $primary-lighter;
 }
 
-.control:hover > .control__mark--checkbox::before,
-.control__input[type="radio"]:focus-visible + .control__mark--checkbox::before {
+.control:hover > .control__mark--radio::before,
+.control__input[type="radio"]:focus-visible + .control__mark--radio::before {
   background-color: $primary-opacity;
 }
 
@@ -58,14 +58,16 @@
   color: $base-grey;
 }
 
-.control__input[type="radio"]:disabled + .control__mark--checkbox {
+.control__input[type="radio"]:disabled + .control__mark--radio {
   border-color: $light-grey;
 }
 
-.control__input[type="radio"]:disabled + .control__mark--checkbox::before {
+.control__input[type="radio"]:disabled + .control__mark--radio::before {
   background-color: transparent;
 }
 
-.control__input[type="radio"]:checked:disabled + .control__mark--checkbox::before {
+.control__input[type="radio"]:checked:disabled + .control__mark--radio::before {
   background-color: $light-grey;
 }
+
+/* Conditions for checkbox */

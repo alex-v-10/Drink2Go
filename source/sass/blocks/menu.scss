@@ -70,7 +70,7 @@
   }
 
   &:not(.menu__link--current):hover,
-  &:not(.menu__link--current):focus {
+  &:not(.menu__link--current):focus-visible {
     @media (min-width: $tablet) {
       color: $base-primary;
     }
