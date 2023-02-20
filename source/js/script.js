@@ -35,7 +35,7 @@ Custom Select
 template from https://www.w3schools.com/howto/howto_custom_select.asp
 */
 
-var x, i, j, l, ll, selElmnt, a, b, c;
+var x, i, j, l, ll, selElmnt, a, b, c, aText;
 /* Look for any elements with the class "select": */
 x = document.getElementsByClassName("select");
 l = x.length;
@@ -45,7 +45,13 @@ for (i = 0; i < l; i++) {
   /* For each element, create a new DIV that will act as the selected item: */
   a = document.createElement("DIV");
   a.setAttribute("class", "select__selected");
-  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+
+  aText = document.createElement("DIV");
+  aText.setAttribute("class", "select__selected-text");
+  aText.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  a.appendChild(aText);
+  console.log('append atext');
+
   x[i].appendChild(a);
   /* For each element, create a new DIV that will contain the option list: */
   b = document.createElement("DIV");
@@ -62,11 +68,10 @@ for (i = 0; i < l; i++) {
       var y, i, k, s, h, sl, yl;
       s = this.parentNode.parentNode.getElementsByTagName("select")[0];
       sl = s.length;
-      h = this.parentNode.previousSibling;
       for (i = 0; i < sl; i++) {
         if (s.options[i].innerHTML == this.innerHTML) {
           s.selectedIndex = i;
-          h.innerHTML = this.innerHTML;
+          aText.innerHTML = this.innerHTML;
           y = this.parentNode.getElementsByClassName("select__same");
           yl = y.length;
           for (k = 0; k < yl; k++) {
@@ -76,8 +81,7 @@ for (i = 0; i < l; i++) {
           break;
         }
       }
-      // a.classList.remove("select__selected--focus");
-      h.click();
+      a.click();
     });
     b.appendChild(c);
   }
@@ -97,10 +101,10 @@ for (i = 0; i < l; i++) {
 
   /* Focus Events */
   selElmnt.addEventListener("change", function () {
-    a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+    aText.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
     for (let item of b.children) {
       item.removeAttribute("class", "select__same");
-      if (a.innerHTML === item.innerHTML) {
+      if (aText.innerHTML === item.innerHTML) {
         item.setAttribute("class", "select__same");
       }
     }
@@ -135,8 +139,8 @@ for (i = 0; i < l; i++) {
 
   selElmnt.addEventListener("focusout", function () {
     a.classList.remove("select__selected--focus");
-    a.classList.remove("select__selected--active");
     if (!isMouseOver) {
+      a.classList.remove("select__selected--active");
       b.classList.add("select__items--hide");
     }
   });

@@ -8,10 +8,6 @@
   line-height: 24px;
 }
 
-.cards__select {
-  flex-shrink: 0;
-}
-
 .cards__list {
   list-style: none;
   margin: 0;
@@ -21,12 +17,12 @@
   gap: 20px;
 
   @media (min-width: $tablet) {
-    grid-template-columns: 349px 349px;
+    grid-template-columns: repeat(2, max-content);
     gap: 30px;
   }
 
   @media (min-width: $desktop) {
-    grid-template-columns: 349px 349px;
+    grid-template-columns: repeat(3, max-content);
     gap: 30px;
   }
 }

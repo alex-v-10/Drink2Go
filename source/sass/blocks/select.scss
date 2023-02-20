@@ -1,6 +1,5 @@
 /* The container must be positioned relative: */
 .select {
-  width: max-content;
   position: relative;
   font-family: inherit;
 }
@@ -19,6 +18,9 @@
   border-radius: 4px;
   cursor: pointer;
   color: $base-primary;
+  width: 165px;
+  height: 32px;
+  white-space: nowrap;
 }
 
 .select__selected:hover,
@@ -46,6 +48,14 @@
   transform: rotate(135deg);
   top: 14px;
   right: 10px;
+}
+
+/* Style arrow space */
+
+.select__selected-text {
+  width: 125px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Point the arrow upwards when the select box is open (active): */
