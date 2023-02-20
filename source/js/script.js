@@ -14,15 +14,11 @@ menuButton.addEventListener('click', () => {
 /* Promo Slider */
 
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  // loop: true,
-
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
-
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
@@ -35,135 +31,127 @@ Custom Select
 template from https://www.w3schools.com/howto/howto_custom_select.asp
 */
 
-var x, i, j, l, ll, selElmnt, a, b, c, aText;
+var i, j, custom, customLength, selectTagLength, selectTag, main, mainText, itemsContainer, itemElement;
 /* Look for any elements with the class "select": */
-x = document.getElementsByClassName("select");
-l = x.length;
-for (i = 0; i < l; i++) {
-  selElmnt = x[i].getElementsByTagName("select")[0];
-  ll = selElmnt.length;
+custom = document.getElementsByClassName("select");
+customLength = custom.length;
+for (i = 0; i < customLength; i++) {
+  selectTag = custom[i].getElementsByTagName("select")[0];
+  selectTagLength = selectTag.length;
   /* For each element, create a new DIV that will act as the selected item: */
-  a = document.createElement("DIV");
-  a.setAttribute("class", "select__selected");
-
-  aText = document.createElement("DIV");
-  aText.setAttribute("class", "select__selected-text");
-  aText.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-  a.appendChild(aText);
-  console.log('append atext');
-
-  x[i].appendChild(a);
+  main = document.createElement("DIV");
+  main.setAttribute("class", "select__selected");
+  mainText = document.createElement("DIV");
+  mainText.setAttribute("class", "select__selected-text");
+  mainText.innerHTML = selectTag.options[selectTag.selectedIndex].innerHTML;
+  main.appendChild(mainText);
+  custom[i].appendChild(main);
   /* For each element, create a new DIV that will contain the option list: */
-  b = document.createElement("DIV");
-  b.setAttribute("class", "select__items select__items--hide");
-  for (j = 0; j < ll; j++) {
+  itemsContainer = document.createElement("DIV");
+  itemsContainer.setAttribute("class", "select__items select__items--hide");
+  for (j = 0; j < selectTagLength; j++) {
     /* For each option in the original select element,
     create a new DIV that will act as an option item: */
-    c = document.createElement("DIV");
-    c.innerHTML = selElmnt.options[j].innerHTML;
+    itemElement = document.createElement("DIV");
+    itemElement.innerHTML = selectTag.options[j].innerHTML;
 
-    c.addEventListener("click", function () {
+    itemElement.addEventListener("click", function () {
       /* When an item is clicked, update the original select box,
       and the selected item: */
-      var y, i, k, s, h, sl, yl;
-      s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-      sl = s.length;
-      for (i = 0; i < sl; i++) {
-        if (s.options[i].innerHTML == this.innerHTML) {
-          s.selectedIndex = i;
-          aText.innerHTML = this.innerHTML;
-          y = this.parentNode.getElementsByClassName("select__same");
-          yl = y.length;
-          for (k = 0; k < yl; k++) {
-            y[k].removeAttribute("class");
+      var i, j, selectTag, selectTagLength, main, mainText, same, sameLength;
+      selectTag = this.parentNode.parentNode.getElementsByTagName("select")[0];
+      selectTagLength = selectTag.length;
+      main = this.parentNode.previousSibling;
+      mainText = main.querySelector('.select__selected-text');
+      for (i = 0; i < selectTagLength; i++) {
+        if (selectTag.options[i].innerHTML == this.innerHTML) {
+          selectTag.selectedIndex = i;
+          mainText.innerHTML = this.innerHTML;
+          same = this.parentNode.getElementsByClassName("select__same");
+          sameLength = same.length;
+          for (j = 0; j < sameLength; j++) {
+            same[j].removeAttribute("class");
           }
           this.setAttribute("class", "select__same");
           break;
         }
       }
-      a.click();
+      main.click();
     });
-    b.appendChild(c);
+    itemsContainer.appendChild(itemElement);
   }
-  x[i].appendChild(b);
+  custom[i].appendChild(itemsContainer);
 
-  a.addEventListener("click", function (e) {
+  main.addEventListener("click", function (event) {
     /* When the select box is clicked, close any other select boxes,
     and open/close the current select box: */
-    e.stopPropagation();
+    event.stopPropagation();
     closeAllSelect(this);
     this.nextSibling.classList.toggle("select__items--hide");
     this.classList.toggle("select__selected--active");
-    selElmnt.focus();
-    a.classList.add("select__selected--focus")
+    selectTag.focus();
+    main.classList.add("select__selected--focus")
   });
 
 
   /* Focus Events */
-  selElmnt.addEventListener("change", function () {
-    aText.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-    for (let item of b.children) {
+  selectTag.addEventListener("change", function () {
+    mainText.innerHTML = selectTag.options[selectTag.selectedIndex].innerHTML;
+    for (let item of itemsContainer.children) {
       item.removeAttribute("class", "select__same");
-      if (aText.innerHTML === item.innerHTML) {
+      if (mainText.innerHTML === item.innerHTML) {
         item.setAttribute("class", "select__same");
       }
     }
   });
-
-  selElmnt.addEventListener("keypress", function (event) {
+  selectTag.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
       event.preventDefault();
-      a.classList.toggle("select__selected--active");
-      a.nextSibling.classList.toggle("select__items--hide");
+      main.click();
     }
   });
-
-  selElmnt.addEventListener("focus", function () {
-    a.classList.add("select__selected--focus");
+  selectTag.addEventListener("focus", function () {
+    main.classList.add("select__selected--focus");
   });
 
   let isMouseOver = false;
-  let mouseOverItems = [a, b];
-
+  let mouseOverItems = [main, itemsContainer];
 
   mouseOverItems.forEach((item) => {
-    item.addEventListener("mouseover", function() {
+    item.addEventListener("mouseover", function () {
       isMouseOver = true;
-      console.log(isMouseOver);
     });
-    item.addEventListener("mouseout", function() {
+    item.addEventListener("mouseout", function () {
       isMouseOver = false;
-      console.log(isMouseOver);
     });
   })
-
-  selElmnt.addEventListener("focusout", function () {
-    a.classList.remove("select__selected--focus");
+  selectTag.addEventListener("focusout", function () {
+    main.classList.remove("select__selected--focus");
     if (!isMouseOver) {
-      a.classList.remove("select__selected--active");
-      b.classList.add("select__items--hide");
+      main.classList.remove("select__selected--active");
+      itemsContainer.classList.add("select__items--hide");
     }
   });
 }
 
-function closeAllSelect(elmnt) {
+function closeAllSelect(element) {
   /* A function that will close all select boxes in the document,
   except the current select box: */
-  var x, y, i, xl, yl, arrNo = [];
-  x = document.getElementsByClassName("select__items");
-  y = document.getElementsByClassName("select__selected");
-  xl = x.length;
-  yl = y.length;
-  for (i = 0; i < yl; i++) {
-    if (elmnt == y[i]) {
+  var i, main, mainLength, itemsContainer, itemsContainerLength, arrNo = [];
+  main = document.getElementsByClassName("select__selected");
+  mainLength = main.length;
+  itemsContainer = document.getElementsByClassName("select__items");
+  itemsContainerLength = itemsContainer.length;
+  for (i = 0; i < mainLength; i++) {
+    if (element == main[i]) {
       arrNo.push(i)
     } else {
-      y[i].classList.remove("select__selected--active");
+      main[i].classList.remove("select__selected--active");
     }
   }
-  for (i = 0; i < xl; i++) {
+  for (i = 0; i < itemsContainerLength; i++) {
     if (arrNo.indexOf(i)) {
-      x[i].classList.add("select__items--hide");
+      itemsContainer[i].classList.add("select__items--hide");
     }
   }
 }
