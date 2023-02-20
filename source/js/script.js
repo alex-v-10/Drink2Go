@@ -31,7 +31,7 @@ Custom Select
 template from https://www.w3schools.com/howto/howto_custom_select.asp
 */
 
-var i, j, custom, customLength, selectTagLength, selectTag, main, mainText, itemsContainer, itemElement;
+var i, j, custom, customLength, selectTag, selectTagLength, main, mainText, itemsContainer, itemElement;
 /* Look for any elements with the class "select": */
 custom = document.getElementsByClassName("select");
 customLength = custom.length;
@@ -97,7 +97,7 @@ for (i = 0; i < customLength; i++) {
   /* Focus Events */
   selectTag.addEventListener("change", function () {
     mainText.innerHTML = selectTag.options[selectTag.selectedIndex].innerHTML;
-    for (let item of itemsContainer.children) {
+    for (const item of itemsContainer.children) {
       item.removeAttribute("class", "select__same");
       if (mainText.innerHTML === item.innerHTML) {
         item.setAttribute("class", "select__same");

@@ -77,7 +77,7 @@
 
   <main class="page__main">
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go</h1>
-    <!--? Slider main container -->
+    <!--? Promo Slider -->
     <div class="swiper">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
@@ -143,7 +143,7 @@
               <div class="slide__buy">
                 <span class="slide__old-price">285₽</span>
                 <span class="slide__price">265₽</span>
-                <button class="slide__button" type="button">Заказать</button>
+                <button class="slide__button button" type="button">Заказать</button>
               </div>
             </div>
           </div>
@@ -176,7 +176,7 @@
               <div class="slide__buy">
                 <span class="slide__old-price">395₽</span>
                 <span class="slide__price">375₽</span>
-                <button class="slide__button" type="button">Заказать</button>
+                <button class="slide__button button" type="button">Заказать</button>
               </div>
             </div>
           </div>
@@ -240,6 +240,7 @@
           <p class="title__badge">Каталог</p>
           <h2 class="title__text">Каталог кофейных напитков</h2>
         </div>
+        <!--? Filter -->
         <form class="catalog__filter filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="filter__set">
             <legend class="filter__title">Цена</legend>
@@ -342,10 +343,11 @@
             </ul>
           </fieldset>
           <div class="filter__buttons">
-            <button class="filter__button button button--filter" type="submit">Применить фильтр</button>
-            <button class="filter__button button button--filter button--reset" type="reset">Сбросить фильтр</button>
+            <button class="filter__button button button--filter button--lesser" type="submit">Применить фильтр</button>
+            <button class="filter__button button button--filter button--secondary" type="reset">Сбросить фильтр</button>
           </div>
         </form>
+        <!--? Cards -->
         <div class="catalog__cards cards">
           <div class="cards__select-container">
             <label class="cards__select-title" for="cards-select">Сортировка:</label>
@@ -376,7 +378,8 @@
                 <div class="card__buy">
                   <p class="card__price">225₽</p>
                   <button class="card__button button button--card">
-                    <svg class="button__icon" width="20" height="16" fill="currentColor" aria-hidden="true" focusable="false">
+                    <svg class="button__icon" width="20" height="16" fill="currentColor" aria-hidden="true"
+                      focusable="false">
                       <use xlink:href="img/icons/stack.svg#cart-plus"></use>
                     </svg>
                     В корзину
@@ -405,7 +408,8 @@
                 <div class="card__buy">
                   <p class="card__price">225₽</p>
                   <button class="card__button button button--card">
-                    <svg class="button__icon" width="20" height="16" fill="currentColor" aria-hidden="true" focusable="false">
+                    <svg class="button__icon" width="20" height="16" fill="currentColor" aria-hidden="true"
+                      focusable="false">
                       <use xlink:href="img/icons/stack.svg#cart-plus"></use>
                     </svg>
                     В корзину
@@ -414,7 +418,40 @@
               </div>
             </li>
           </ul>
-          <div class="cards__pagination"></div>
+          <!--? Cards Pagination -->
+          <!-- Если pagination__item--current на 1 то удалить pagination__turn--active
+            и добавить disabled к button--back -->
+          <div class="cards__pagination pagination">
+            <div class="pagination__turn pagination__turn--back pagination__turn--active">
+              <button class="button button--secondary button--back" type="button">
+                <svg class="button__icon" width="10" height="10" fill="currentColor" aria-hidden="true"
+                  focusable="false">
+                  <use xlink:href="img/icons/stack.svg#arrow"></use>
+                </svg>
+                <span class="hidden-mobile">Назад</span>
+              </button>
+            </div>
+            <ol class="pagination__list">
+              <li class="pagination__item">
+                <button class="button button--secondary button--pagination" type="button">1</button>
+              </li>
+              <li class="pagination__item pagination__item--current">
+                <button class="button button--secondary button--pagination" type="button">2</button>
+              </li>
+              <li class="pagination__item">
+                <button class="button button--secondary button--pagination" type="button">3</button>
+              </li>
+            </ol>
+            <div class="pagination__turn pagination__turn--forward pagination__turn--active" style="opacity: 1;">
+              <button class="button button--secondary button--forward" type="button">
+                <svg class="button__icon" width="10" height="10" fill="currentColor" aria-hidden="true"
+                  focusable="false">
+                  <use xlink:href="img/icons/stack.svg#arrow"></use>
+                </svg>
+                <span class="hidden-mobile">Вперёд</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
