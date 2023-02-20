@@ -105,7 +105,9 @@ for (i = 0; i < l; i++) {
 
   selElmnt.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
+      event.preventDefault();
       a.classList.toggle("select__selected--active");
+      a.nextSibling.classList.toggle("select__items--hide");
     }
   });
 
@@ -115,6 +117,7 @@ for (i = 0; i < l; i++) {
 
   selElmnt.addEventListener("focusout", function () {
     a.classList.remove("select__selected--focus");
+    a.nextSibling.classList.add("select__items--hide");
   });
 }
 
