@@ -1,0 +1,64 @@
+.card {
+  padding: 40px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  box-sizing: border-box;
+  background-color: $base-white;
+}
+
+.card__image-container {
+  margin-bottom: 24px;
+}
+
+.card__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.card__title {
+  margin: 0;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.card__title-link {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover,
+  &:focus-visible {
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
+}
+
+.card__description {
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.card__buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__price {
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.card__button {
+  font-size: 14px;
+  line-height: 20px;
+}
