@@ -3,8 +3,22 @@
   display: flex;
   flex-direction: column;
   width: 280px;
+  height: 100%;
   box-sizing: border-box;
   background-color: $base-white;
+
+  @media (min-width: $tablet) {
+    padding: 50px 30px 30px;
+    width: 349px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 317px;
+
+    &:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+  }
 }
 
 .card__image-container {
@@ -22,6 +36,11 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .card__title-link {
@@ -39,6 +58,7 @@
 }
 
 .card__description {
+  flex-grow: 1;
   margin: 0;
   margin-bottom: 16px;
   font-size: 14px;

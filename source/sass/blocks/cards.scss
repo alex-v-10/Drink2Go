@@ -18,4 +18,15 @@
   margin-bottom: 40px;
   padding: 0;
   display: grid;
+  gap: 20px;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 349px 349px;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 349px 349px;
+    gap: 30px;
+  }
 }

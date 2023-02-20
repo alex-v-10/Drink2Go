@@ -56,7 +56,7 @@ for (i = 0; i < l; i++) {
     c = document.createElement("DIV");
     c.innerHTML = selElmnt.options[j].innerHTML;
 
-    c.addEventListener("click", function (e) {
+    c.addEventListener("click", function () {
       /* When an item is clicked, update the original select box,
       and the selected item: */
       var y, i, k, s, h, sl, yl;
@@ -76,6 +76,7 @@ for (i = 0; i < l; i++) {
           break;
         }
       }
+      // a.classList.remove("select__selected--focus");
       h.click();
     });
     b.appendChild(c);
@@ -89,6 +90,8 @@ for (i = 0; i < l; i++) {
     closeAllSelect(this);
     this.nextSibling.classList.toggle("select__items--hide");
     this.classList.toggle("select__selected--active");
+    selElmnt.focus();
+    a.classList.add("select__selected--focus")
   });
 
 
@@ -115,9 +118,27 @@ for (i = 0; i < l; i++) {
     a.classList.add("select__selected--focus");
   });
 
+  let isMouseOver = false;
+  let mouseOverItems = [a, b];
+
+
+  mouseOverItems.forEach((item) => {
+    item.addEventListener("mouseover", function() {
+      isMouseOver = true;
+      console.log(isMouseOver);
+    });
+    item.addEventListener("mouseout", function() {
+      isMouseOver = false;
+      console.log(isMouseOver);
+    });
+  })
+
   selElmnt.addEventListener("focusout", function () {
     a.classList.remove("select__selected--focus");
-    a.nextSibling.classList.add("select__items--hide");
+    a.classList.remove("select__selected--active");
+    if (!isMouseOver) {
+      b.classList.add("select__items--hide");
+    }
   });
 }
 
@@ -145,4 +166,4 @@ function closeAllSelect(elmnt) {
 
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
-document.addEventListener("click", closeAllSelect);
+document.addEventListener("click", function () { closeAllSelect(); });
