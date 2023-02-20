@@ -1,0 +1,106 @@
+/* The container must be positioned relative: */
+.select {
+  width: max-content;
+  position: relative;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.select select {
+  @include visually-hidden; /*hide original SELECT element: */
+  top: 32px;
+}
+
+.select__selected {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  padding: 4px 30px 4px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: $base-primary;
+}
+
+.select__selected:hover,
+.select__selected--focus {
+  background-color: $base-secondary;
+}
+
+/* Style the arrow inside the select element: */
+.select__selected::before,
+.select__selected::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 2px;
+  background-color: $base-primary;
+}
+
+.select__selected::before {
+  transform: rotate(45deg);
+  top: 14px;
+  right: 15px;
+}
+
+.select__selected::after {
+  transform: rotate(135deg);
+  top: 14px;
+  right: 10px;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select__selected.select__selected--active::before {
+  right: 10px;
+}
+
+.select__selected.select__selected--active::after {
+  right: 15px;
+}
+
+/* style the items (options): */
+.select__items div {
+  cursor: pointer;
+  padding: 8px 20px;
+
+  &:first-child {
+    border-radius: 4px 4px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 4px 4px;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $base-secondary;
+  }
+
+  &:hover {
+    background-color: $base-secondary;
+  }
+
+  &.select__same {
+    color: $base-white;
+    background-color: $base-primary;
+  }
+}
+
+/* Style items (options): */
+.select__items {
+  box-sizing: border-box;
+  width: max-content;
+  position: absolute;
+  background-color: $base-white;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  box-shadow: 0 10px 20px -10px $base-black;
+  border-radius: 4px;
+}
+
+/* Hide the items when the select box is closed: */
+.select__items--hide {
+  display: none;
+}

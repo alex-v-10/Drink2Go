@@ -4,7 +4,7 @@
   justify-content: start;
 
   @media (max-width: ($tablet - 0.5px)) {
-    padding-right: 0;
+    padding: 0;
   }
 }
 
@@ -21,11 +21,11 @@
 
 .header__logo {
   margin-top: 12px;
+  margin-left: 20px;
   cursor: pointer;
 
   @media (min-width: $tablet) {
-    margin-top: 22px;
-    margin-right: 67px;
+    margin: 22px 67px 0 0;
   }
 
   @media (min-width: $desktop) {

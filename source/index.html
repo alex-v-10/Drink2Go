@@ -22,7 +22,7 @@
       </picture>
     </a>
     <span class="header__description">Интернет-магазин кофейных напитков</span>
-    <nav class="header__navigation navigation navigation--nojs">
+    <nav class="header__navigation navigation">
       <ul class="navigation__list">
         <li class="navigation__item">
           <a class="navigation__link" href="#">
@@ -258,8 +258,8 @@
             <div class="filter__number-range number-range">
               <label>
                 <span class="visually-hidden">от</span>
-                <input class="number-range__input number-range__input--zero" type="number" id="min-price" name="min-price"
-                  placeholder="0">
+                <input class="number-range__input number-range__input--zero" type="number" id="min-price"
+                  name="min-price" placeholder="0">
               </label>
               <div class="number-range__dash"></div>
               <label>
@@ -346,7 +346,22 @@
             <button class="filter__button button button--filter button--reset" type="reset">Сбросить фильтр</button>
           </div>
         </form>
-        <div class="catalog__cards cards"></div>
+        <div class="catalog__cards cards">
+          <div class="cards__sort">
+            <label class="cards__sort-title" for="cards-select">Сортировка:</label>
+            <div class="cards__select
+             select">
+              <select id="cards-select">
+                <option value="default">по умолчанию</option>
+                <option value="expensive">сначала дорогие</option>
+                <option value="cheap">сначала дешёвые</option>
+                <option value="high rating">высокий рейтинг</option>
+              </select>
+            </div>
+          </div>
+          <li class="cards__list"></li>
+          <div class="cards__pagination"></div>
+        </div>
       </div>
     </section>
   </main>
