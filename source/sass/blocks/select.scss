@@ -5,8 +5,7 @@
 }
 
 .select select {
-  @include visually-hidden; /*hide original SELECT element: */
-  top: 32px;
+  font-family: inherit;
 }
 
 .select__selected {

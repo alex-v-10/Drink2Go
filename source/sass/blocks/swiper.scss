@@ -1,3 +1,8 @@
+.swiper--nojs .swiper-button-next,
+.swiper--nojs .swiper-button-prev {
+  display: none;
+}
+
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 20px;

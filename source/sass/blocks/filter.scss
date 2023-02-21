@@ -37,3 +37,16 @@
 .filter__button:not(:last-child) {
   margin-bottom: 25px;
 }
+
+.filter__button {
+  padding: 10px 15px;
+  min-width: 160px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.filter__button.button--lesser {
+  @media (max-width: ($tablet - 0.5px)) {
+    font-size: 13px;
+  }
+}

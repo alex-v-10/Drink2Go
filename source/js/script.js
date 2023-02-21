@@ -13,6 +13,9 @@ menuButton.addEventListener('click', () => {
 
 /* Promo Slider */
 
+const swiperElement = document.querySelector(".swiper");
+swiperElement.classList.remove("swiper--nojs");
+
 const swiper = new Swiper('.swiper', {
   // If we need pagination
   pagination: {
@@ -37,6 +40,7 @@ custom = document.getElementsByClassName("select");
 customLength = custom.length;
 for (i = 0; i < customLength; i++) {
   selectTag = custom[i].getElementsByTagName("select")[0];
+  selectTag.classList.add("visually-hidden");
   selectTagLength = selectTag.length;
   /* For each element, create a new DIV that will act as the selected item: */
   main = document.createElement("DIV");

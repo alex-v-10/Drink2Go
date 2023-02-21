@@ -11,14 +11,41 @@
   gap: 20px;
 }
 
-.pagination__button--back .pagination__button-icon {
-  transform: rotate(180deg);
-}
-
 .pagination__turn {
   opacity: 0;
 }
 
 .pagination__turn--active {
   opacity: 1;
+}
+
+.pagination__item .button {
+  padding: 8px;
+  width: 40px;
+}
+
+.pagination__turn .button {
+  padding: 8px;
+  width: 40px;
+
+  @media (min-width: $tablet) {
+    padding: 8px 20px;
+    min-width: max-content;
+  }
+}
+
+.pagination__turn--back .button__icon {
+  transform: rotate(180deg);
+}
+
+.pagination__turn .button__icon {
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.pagination__item--current .button {
+  font-weight: 600;
+  color: $base-black;
+  background-color: transparent;
 }
