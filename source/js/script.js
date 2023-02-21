@@ -17,12 +17,10 @@ const swiperElement = document.querySelector(".swiper");
 swiperElement.classList.remove("swiper--nojs");
 
 const swiper = new Swiper('.swiper', {
-  // If we need pagination
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -44,9 +42,9 @@ for (i = 0; i < customLength; i++) {
   selectTagLength = selectTag.length;
   /* For each element, create a new DIV that will act as the selected item: */
   main = document.createElement("DIV");
-  main.setAttribute("class", "select__selected");
+  main.setAttribute("class", "select__main");
   mainText = document.createElement("DIV");
-  mainText.setAttribute("class", "select__selected-text");
+  mainText.setAttribute("class", "select__main-text");
   mainText.innerHTML = selectTag.options[selectTag.selectedIndex].innerHTML;
   main.appendChild(mainText);
   custom[i].appendChild(main);
@@ -66,7 +64,7 @@ for (i = 0; i < customLength; i++) {
       selectTag = this.parentNode.parentNode.getElementsByTagName("select")[0];
       selectTagLength = selectTag.length;
       main = this.parentNode.previousSibling;
-      mainText = main.querySelector('.select__selected-text');
+      mainText = main.querySelector('.select__main-text');
       for (i = 0; i < selectTagLength; i++) {
         if (selectTag.options[i].innerHTML == this.innerHTML) {
           selectTag.selectedIndex = i;
@@ -92,9 +90,9 @@ for (i = 0; i < customLength; i++) {
     event.stopPropagation();
     closeAllSelect(this);
     this.nextSibling.classList.toggle("select__items--hide");
-    this.classList.toggle("select__selected--active");
+    this.classList.toggle("select__main--active");
     selectTag.focus();
-    main.classList.add("select__selected--focus")
+    main.classList.add("select__main--focus")
   });
 
 
@@ -115,7 +113,7 @@ for (i = 0; i < customLength; i++) {
     }
   });
   selectTag.addEventListener("focus", function () {
-    main.classList.add("select__selected--focus");
+    main.classList.add("select__main--focus");
   });
 
   let isMouseOver = false;
@@ -130,9 +128,9 @@ for (i = 0; i < customLength; i++) {
     });
   })
   selectTag.addEventListener("focusout", function () {
-    main.classList.remove("select__selected--focus");
+    main.classList.remove("select__main--focus");
     if (!isMouseOver) {
-      main.classList.remove("select__selected--active");
+      main.classList.remove("select__main--active");
       itemsContainer.classList.add("select__items--hide");
     }
   });
@@ -142,7 +140,7 @@ function closeAllSelect(element) {
   /* A function that will close all select boxes in the document,
   except the current select box: */
   var i, main, mainLength, itemsContainer, itemsContainerLength, arrNo = [];
-  main = document.getElementsByClassName("select__selected");
+  main = document.getElementsByClassName("select__main");
   mainLength = main.length;
   itemsContainer = document.getElementsByClassName("select__items");
   itemsContainerLength = itemsContainer.length;
@@ -150,7 +148,7 @@ function closeAllSelect(element) {
     if (element == main[i]) {
       arrNo.push(i)
     } else {
-      main[i].classList.remove("select__selected--active");
+      main[i].classList.remove("select__main--active");
     }
   }
   for (i = 0; i < itemsContainerLength; i++) {

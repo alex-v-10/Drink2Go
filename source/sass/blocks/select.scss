@@ -8,7 +8,7 @@
   font-family: inherit;
 }
 
-.select__selected {
+.select__main {
   position: relative;
   box-sizing: border-box;
   padding: 4px 30px 4px 10px;
@@ -19,14 +19,14 @@
   width: 165px;
 }
 
-.select__selected:hover,
-.select__selected--focus {
+.select__main:hover,
+.select__main--focus {
   background-color: $base-secondary;
 }
 
 /* Style the arrow inside the select element: */
-.select__selected::before,
-.select__selected::after {
+.select__main::before,
+.select__main::after {
   position: absolute;
   content: "";
   width: 8px;
@@ -34,13 +34,13 @@
   background-color: $base-primary;
 }
 
-.select__selected::before {
+.select__main::before {
   transform: rotate(45deg);
   top: 14px;
   right: 15px;
 }
 
-.select__selected::after {
+.select__main::after {
   transform: rotate(135deg);
   top: 14px;
   right: 10px;
@@ -48,7 +48,7 @@
 
 /* Style arrow space */
 
-.select__selected-text {
+.select__main-text {
   width: 125px;
   white-space: nowrap;
   overflow: hidden;
@@ -56,11 +56,11 @@
 }
 
 /* Point the arrow upwards when the select box is open (active): */
-.select__selected.select__selected--active::before {
+.select__main.select__main--active::before {
   right: 10px;
 }
 
-.select__selected.select__selected--active::after {
+.select__main.select__main--active::after {
   right: 15px;
 }
 

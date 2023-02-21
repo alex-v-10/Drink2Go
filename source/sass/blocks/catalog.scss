@@ -11,10 +11,37 @@
   @media (min-width: $desktop) {
     padding-top: 100px;
     padding-bottom: 120px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.catalog .container {
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.catalog__title {
+  @media (min-width: $desktop) {
+    flex: 0 0 100%;
   }
 }
 
 .catalog__filter {
   margin-top: 20px;
   margin-bottom: 36px;
+
+  @media (min-width: $desktop) {
+    margin-top: 40px;
+    margin-right: 30px;
+    flex: 0 0 318px;
+  }
+}
+
+.catalog__cards {
+  @media (min-width: $desktop) {
+    flex: 0 0 1011px;
+  }
 }
