@@ -4,8 +4,12 @@
   align-items: center;
 }
 
+.number-range__input-label {
+  width: 42%;
+}
+
 .number-range__input {
-  width: 118px;
+  width: 100%;
   box-sizing: border-box;
   padding: 7px 10px;
   border: 2px solid $primary-lighter;
@@ -40,7 +44,7 @@
 }
 
 .number-range__dash {
-  width: 9px;
+  width: 3%;
   height: 2px;
   background-color: $base-grey;
 }
