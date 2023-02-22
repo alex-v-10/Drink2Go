@@ -1,0 +1,29 @@
+.footer {
+  height: 500px;
+  flex-shrink: 0;
+
+  @media (max-width: ($tablet - 0.5px)) {
+    padding: 0;
+  }
+}
+
+.footer__item {
+  padding: 20px;
+
+  @media (max-width: ($tablet - 0.5px)) {
+    border-bottom: 1px solid $base-secondary;
+  }
+
+  &:first-child {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer__logo {
+  margin: 2px 0;
+}
+
+.footer__socials {
+  max-width: 160px;
+}

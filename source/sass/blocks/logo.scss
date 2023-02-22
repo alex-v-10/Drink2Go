@@ -1,0 +1,12 @@
+.logo {
+  cursor: pointer;
+}
+
+.logo img {
+  display: block;
+}
+
+.logo:hover,
+.logo:focus-visible {
+  opacity: 0.5;
+}

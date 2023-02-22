@@ -1,0 +1,23 @@
+.socials {
+  display: flex;
+  gap: 20px;
+}
+
+.socials__item {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  color: $base-grey;
+
+  &:hover,
+  &:focus-visible {
+    color: $base-primary;
+  }
+}
+
+.socials__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
