@@ -54,9 +54,33 @@
 }
 
 .features__icon {
+  width: 52px;
+  height: 56px;
+  margin-bottom: 10px;
+
   @media (min-width: $tablet) {
     flex-shrink: 0;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 20px;
+  }
+}
+
+.features__item:first-child .features__icon {
+  background-image: url("../../img/features/watch.svg");
+}
+
+.features__item:nth-child(2) .features__icon {
+  background-image: url("../../img/features/comfort.svg");
+}
+
+.features__item:nth-child(3) .features__icon {
+  background-image: url("../../img/features/lightning.svg");
+}
+
+.features__item:nth-child(4) .features__icon {
+  background-image: url("../../img/features/leaf.svg");
 }
 
 .features__text-container {
@@ -66,7 +90,7 @@
 }
 
 .features__title {
-  margin: 10px 0 4px;
+  margin: 0 0 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
