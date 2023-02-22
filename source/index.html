@@ -6,11 +6,17 @@
   <title>Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/Montserrat-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
-  <header class="header container">
+  <header class="header container header--nojs">
     <a class="header__logo" href="#">
       <picture>
         <source media="(min-width: 1440px)" width="170" height="36" srcset="img/logo/logo-3.svg">
@@ -395,11 +401,7 @@
                 <h3 class="card__title">
                   <a class="card__title-link" href="#">Декаф Флэт Уайт</a>
                 </h3>
-                <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком
-                  Кофе без кофеина из Эфиопии с натуральным фермерским молоком
-                  Кофе без кофеина из Эфиопии с натуральным фермерским молоком
-                  Кофе без кофеина из Эфиопии с натуральным фермерским молоком
-                </p>
+                <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <div class="card__buy">
                   <p class="card__price">225₽</p>
                   <button class="card__button button button--card">
@@ -554,11 +556,31 @@
         </div>
       </div>
     </section>
+    <section class="map map--nojs">
+      <h2 class="visually-hidden">Карта</h2>
+      <div class="map__canvas" id="map-canvas" id="map-canvas"></div>
+      <div class="map__canvas-nojs">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
+          <source media="(min-width: 1440px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
+          <img class="map__image" width="280" height="280" src="img/map/map-mobile.jpg"
+            srcset="img/map/map-mobile@2x.jpg 2x" alt="Карта. Санкт-Петербург, набережная реки Карповки, дом 5"
+            loading="lazy">
+        </picture>
+      </div>
+    </section>
   </main>
   <footer>
     Footer
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
   <script type="module" src="./js/script.js" defer></script>
 </body>
 

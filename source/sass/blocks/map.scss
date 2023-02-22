@@ -1,0 +1,41 @@
+.map--nojs .map__canvas {
+  display: none;
+}
+
+.map--nojs .map__canvas-nojs {
+  display: block;
+}
+
+.map__canvas-nojs {
+  display: none;
+  margin: 0 auto;
+  width: $mobile;
+
+  @media (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+  }
+}
+
+.map {
+  background-color: $lightest-grey;
+}
+
+.map__canvas {
+  height: 420px;
+
+  @media (min-width: $tablet) {
+    height: 480px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 540px;
+  }
+}
+
+.map__image {
+  width: 100%;
+}

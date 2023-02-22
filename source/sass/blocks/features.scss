@@ -48,7 +48,7 @@
 
   @media (min-width: $tablet) and (max-width: ($desktop - 0.5px)) {
     flex-direction: row;
-    align-items: start;
+    align-items: flex-start;
     text-align: start;
   }
 }
