@@ -53,7 +53,8 @@
   }
 }
 
-.features__icon {
+.features__item::before {
+  content: "";
   width: 52px;
   height: 56px;
   margin-bottom: 10px;
@@ -67,19 +68,19 @@
   }
 }
 
-.features__item:first-child .features__icon {
+.features__item:first-child::before {
   background-image: url("../../img/features/watch.svg");
 }
 
-.features__item:nth-child(2) .features__icon {
+.features__item:nth-child(2)::before {
   background-image: url("../../img/features/comfort.svg");
 }
 
-.features__item:nth-child(3) .features__icon {
+.features__item:nth-child(3)::before {
   background-image: url("../../img/features/lightning.svg");
 }
 
-.features__item:nth-child(4) .features__icon {
+.features__item:nth-child(4)::before {
   background-image: url("../../img/features/leaf.svg");
 }
 

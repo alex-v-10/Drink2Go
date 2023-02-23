@@ -9,10 +9,8 @@
 }
 
 .header__description {
-  display: none;
-
   @media (min-width: $desktop) {
-    display: block;
+    margin: 0;
     width: 126px;
     align-self: center;
     margin-right: 162px;

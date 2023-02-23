@@ -21,10 +21,10 @@
       <picture>
         <source media="(min-width: 1440px)" width="170" height="36" srcset="img/logo/logo-3.svg">
         <source media="(min-width: 768px)" width="82" height="36" srcset="img/logo/logo-2.svg">
-        <img src="img/logo/logo-1.svg" width="32" height="36" alt="Drink2Go">
+        <img src="img/logo/logo-1.svg" width="32" height="36" alt="Логотип Drink2Go">
       </picture>
     </a>
-    <span class="header__description">Интернет-магазин кофейных напитков</span>
+    <p class="header__description hidden-mobile-tablet">Интернет-магазин кофейных напитков</p>
     <nav class="header__navigation navigation">
       <ul class="navigation__list">
         <li class="navigation__item">
@@ -197,28 +197,24 @@
       </div>
       <ul class="features__list">
         <li class="features__item">
-          <div class="features__icon"></div>
           <div class="features__text-container">
             <h3 class="features__title">Скорость</h3>
             <p class="features__description">Готовый напиток всегда под рукой — просто открой банку</p>
           </div>
         </li>
         <li class="features__item">
-          <div class="features__icon"></div>
           <div class="features__text-container">
             <h3 class="features__title">Удобство</h3>
             <p class="features__description">Легко помещается и в карман, и в маленькую сумочку</p>
           </div>
         </li>
         <li class="features__item">
-          <div class="features__icon"></div>
           <div class="features__text-container">
             <h3 class="features__title">Бодрость</h3>
             <p class="features__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
           </div>
         </li>
         <li class="features__item">
-          <div class="features__icon"></div>
           <div class="features__text-container">
             <h3 class="features__title">Экологичность</h3>
             <p class="features__description">Вся упаковка сделана из перерабатываемых материалов</p>
@@ -573,34 +569,97 @@
       <a class="footer__logo logo" href="#">
         <picture>
           <source media="(min-width: 768px)" width="170" height="36" srcset="img/logo/logo-3.svg">
-          <img src="img/logo/logo-2.svg" width="82" height="36" alt="Drink2Go">
+          <img src="img/logo/logo-2.svg" width="82" height="36" alt="Логотип Drink2Go">
         </picture>
       </a>
+      <p class="footer__description hidden-mobile-tablet">Интернет-магазин кофейных напитков</p>
       <div class="footer__socials socials">
-        <a class="socials__item" href="#">
-          <svg class="socials__icon" width="20" height="20" fill="currentColor"
-            aria-hidden="true" focusable="false">
-            <use xlink:href="img/icons/stack.svg#vk"></use>
-          </svg>
-        </a>
-        <a class="socials__item" href="#">
-          <svg class="socials__icon" width="22" height="22" fill="currentColor"
-            aria-hidden="true" focusable="false">
-            <use xlink:href="img/icons/stack.svg#pinterest"></use>
-          </svg>
-        </a>
-        <a class="socials__item" href="#">
-          <svg class="socials__icon" width="20" height="20" fill="currentColor"
-            aria-hidden="true" focusable="false">
-            <use xlink:href="img/icons/stack.svg#ok"></use>
+        <h2 class="visually-hidden">Ссылки на социальные сети:</h2>
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <svg class="socials__icon" width="20" height="20" fill="currentColor" aria-hidden="true"
+                focusable="false">
+                <use xlink:href="img/icons/stack.svg#vk"></use>
+              </svg>
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <svg class="socials__icon" width="22" height="22" fill="currentColor" aria-hidden="true"
+                focusable="false">
+                <use xlink:href="img/icons/stack.svg#pinterest"></use>
+              </svg>
+              <span class="visually-hidden">Пинтерест</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <svg class="socials__icon" width="20" height="20" fill="currentColor" aria-hidden="true"
+                focusable="false">
+                <use xlink:href="img/icons/stack.svg#ok"></use>
+              </svg>
+              <span class="visually-hidden">Одноклассники</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__item">
+      <h2 class="footer__title">Интернет-магазин</h2>
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <a class="footer__link" href="#">Каталог</a>
+        </li>
+        <li class="footer__list-item">
+          <a class="footer__link" href="#">Доставка</a>
+        </li>
+        <li class="footer__list-item">
+          <a class="footer__link" href="#">Способы оплаты</a>
+        </li>
+        <li class="footer__list-item">
+          <a class="footer__link" href="#">О нас</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__item">
+      <h2 class="footer__title">Медиа</h2>
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <a class="footer__link" href="#">Блог</a>
+        </li>
+        <li class="footer__list-item">
+          <a class="footer__link" href="#">Информация для СМИ</a>
+        </li>
+        <li class="footer__list-item">
+          <a class="footer__link" href="#">Правовая информация</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__item">
+      <h2 class="footer__title">Контакты</h2>
+      <ul class="footer__list footer__list--contacts">
+        <li class="footer__list-item">
+          <a class="footer__link footer__link--icon footer__link--address" href="#">Санкт-Петербург, набережная реки
+            Карповки, дом 5</a>
+        </li>
+        <li class="footer__list-item">
+          <a class="footer__link footer__link--icon footer__link--phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__item">
+      <div class="footer__copyright">
+        Разработано в
+        <a class="footer__copyright-link" href="#">
+          HTML Academy
+          <svg class="footer__copyright-icon" width="12" height="16" fill="currentColor" aria-hidden="true" focusable="false">
+            <use xlink:href="img/icons/stack.svg#html-logo"></use>
           </svg>
         </a>
       </div>
     </div>
-    <div class="footer__item"></div>
-    <div class="footer__item"></div>
-    <div class="footer__item"></div>
-    <div class="footer__item"></div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
