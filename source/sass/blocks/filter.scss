@@ -7,7 +7,7 @@
 
 .filter__set {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   padding: 0;
   border: none;
   font-size: 16px;
@@ -19,7 +19,7 @@
     &:first-child {
       flex: 0 0 220px;
       margin-right: 21px;
-      margin-left: 10px;
+      margin-left: 8px;
     }
 
     &:nth-child(2) {
@@ -39,11 +39,25 @@
 
 .filter__title {
   padding: 0;
+  margin-bottom: 22px;
   font-weight: 600;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 20px;
+  }
+}
+
+.filter__set--price .filter__title {
+  margin-bottom: 0;
+
+  @media (min-width: $tablet) and (max-width: ($desktop - 0.5px)) {
+    position: relative;
+    left: -8px;
+  }
 }
 
 .filter__range {
-  margin-top: 32px;
+  margin-top: 33px;
   margin-bottom: 35px;
 }
 
@@ -53,8 +67,14 @@
   padding: 0;
 }
 
-.filter__item {
-  margin-top: 23px;
+.filter__item:not(:last-child) {
+  margin-bottom: 20px;
+
+  .filter__set--radio & {
+    @media (max-width: ($tablet - 0.5px)) {
+      margin-bottom: 22px;
+    }
+  }
 }
 
 .filter__buttons {
@@ -105,7 +125,7 @@
     padding: 8px 4px;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
     min-width: 150px;
   }
 }

@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <title>Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="fonts/Montserrat-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -33,7 +33,7 @@
               focusable="false">
               <use xlink:href="img/icons/stack.svg#user"></use>
             </svg>
-            <span class="navigation__text hidden-mobile-tablet">Аккаунт</span>
+            <span class="navigation__text hidden-mobile-tablet">Войти</span>
           </a>
         </li>
         <li class="navigation__item">
@@ -82,9 +82,7 @@
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go</h1>
     <!--? Promo Slider -->
     <div class="swiper swiper--nojs">
-      <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
-        <!-- Slides -->
         <div class="swiper-slide">
           <div class="slide slide--1">
             <div class="slide__image-container">
@@ -108,8 +106,8 @@
                 <p class="title__badge">Новинка!</p>
                 <h2 class="title__text">Декаф Флэт Уайт</h2>
               </div>
-              <p class="slide__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком
-                — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+              <p class="slide__description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком
+                — то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
               <div class="slide__buy">
                 <span class="slide__old-price">295₽</span>
                 <span class="slide__price">225₽</span>
@@ -205,7 +203,7 @@
         <li class="features__item">
           <div class="features__text-container">
             <h3 class="features__title">Удобство</h3>
-            <p class="features__description">Легко помещается и в карман, и в маленькую сумочку</p>
+            <p class="features__description">Легко помещается и в карман,<br>и в маленькую сумочку</p>
           </div>
         </li>
         <li class="features__item">
@@ -217,7 +215,7 @@
         <li class="features__item">
           <div class="features__text-container">
             <h3 class="features__title">Экологичность</h3>
-            <p class="features__description">Вся упаковка сделана из перерабатываемых материалов</p>
+            <p class="features__description">Вся упаковка сделана<br>из перерабатываемых материалов</p>
           </div>
         </li>
       </ul>
@@ -231,7 +229,7 @@
         </div>
         <!--? Filter -->
         <form class="catalog__filter filter" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="filter__set">
+          <fieldset class="filter__set filter__set--price">
             <legend class="filter__title">Цена</legend>
             <div class="filter__range">
               <div class="range">
@@ -258,7 +256,7 @@
               </label>
             </div>
           </fieldset>
-          <fieldset class="filter__set">
+          <fieldset class="filter__set filter__set--radio">
             <legend class="filter__title">Наличие молока</legend>
             <ul class="filter__list">
               <li class="filter__item">
@@ -363,7 +361,7 @@
                 <h3 class="card__title">
                   <a class="card__title-link" href="#">Декаф Флэт Уайт</a>
                 </h3>
-                <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <p class="card__description">Кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком</p>
                 <div class="card__buy">
                   <p class="card__price">225₽</p>
                   <button class="card__button button button--card">
@@ -389,7 +387,7 @@
                 <h3 class="card__title">
                   <a class="card__title-link" href="#">Декаф Флэт Уайт</a>
                 </h3>
-                <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <p class="card__description">Кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком</p>
                 <div class="card__buy">
                   <p class="card__price">225₽</p>
                   <button class="card__button button button--card">
@@ -415,7 +413,7 @@
                 <h3 class="card__title">
                   <a class="card__title-link" href="#">Декаф Флэт Уайт</a>
                 </h3>
-                <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <p class="card__description">Кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком</p>
                 <div class="card__buy">
                   <p class="card__price">225₽</p>
                   <button class="card__button button button--card">
@@ -441,7 +439,7 @@
                 <h3 class="card__title">
                   <a class="card__title-link" href="#">Декаф Флэт Уайт</a>
                 </h3>
-                <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <p class="card__description">Кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком</p>
                 <div class="card__buy">
                   <p class="card__price">225₽</p>
                   <button class="card__button button button--card">
@@ -467,7 +465,7 @@
                 <h3 class="card__title">
                   <a class="card__title-link" href="#">Декаф Флэт Уайт</a>
                 </h3>
-                <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <p class="card__description">Кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком</p>
                 <div class="card__buy">
                   <p class="card__price">225₽</p>
                   <button class="card__button button button--card">
@@ -493,7 +491,7 @@
                 <h3 class="card__title">
                   <a class="card__title-link" href="#">Декаф Флэт Уайт</a>
                 </h3>
-                <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <p class="card__description">Кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком</p>
                 <div class="card__buy">
                   <p class="card__price">225₽</p>
                   <button class="card__button button button--card">
@@ -508,8 +506,6 @@
             </li>
           </ul>
           <!--? Cards Pagination -->
-          <!-- Если pagination__item--current на крайней то удалить pagination__turn--active
-            и добавить disabled к pagination__turn button -->
           <div class="cards__pagination pagination">
             <div class="pagination__turn pagination__turn--back pagination__turn--active">
               <button class="button button--secondary" type="button">
@@ -546,7 +542,7 @@
     </section>
     <section class="map map--nojs">
       <h2 class="visually-hidden">Карта</h2>
-      <div class="map__canvas" id="map-canvas" id="map-canvas"></div>
+      <div class="map__canvas" id="map-canvas"></div>
       <div class="map__canvas-nojs">
         <picture>
           <source type="image/webp" media="(min-width: 1440px)"
@@ -637,9 +633,9 @@
         </li>
       </ul>
     </div>
-    <div class="footer__item">
+    <div class="footer__item footer__item--contacts">
       <h2 class="footer__title">Контакты</h2>
-      <ul class="footer__list footer__list--contacts">
+      <ul class="footer__list">
         <li class="footer__list-item">
           <a class="footer__link footer__link--icon footer__link--address" href="#">Санкт-Петербург, набережная реки
             Карповки, дом 5</a>
@@ -663,8 +659,8 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-  <script type="module" src="./js/script.js" defer></script>
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin="" defer></script>
+  <script type="module" src="./js/script.js"></script>
 </body>
 
 </html>

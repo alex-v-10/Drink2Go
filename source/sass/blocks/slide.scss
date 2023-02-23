@@ -71,13 +71,33 @@
   align-items: center;
 
   @media (min-width: $desktop) {
+    margin-top: -6px;
     margin-left: 30px;
     max-width: 625px;
     align-items: flex-start;
   }
 }
 
+.slide__title {
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 16px;
+  }
+}
+
+.slide__title.title {
+  @media (min-width: $desktop) {
+    text-align: start;
+  }
+}
+
+.slide__title .title__text {
+  letter-spacing: 0.02em;
+}
+
 .slide__description {
+  margin: 0 0 20px;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
@@ -89,6 +109,7 @@
   }
 
   @media (min-width: $desktop) {
+    margin-bottom: 40px;
     text-align: start;
   }
 }

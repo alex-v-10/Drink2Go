@@ -6,6 +6,7 @@
 
 .select select {
   font-family: inherit;
+  padding: 2px;
 }
 
 .select__main {
@@ -24,30 +25,6 @@
   background-color: $base-secondary;
 }
 
-/* Style the arrow inside the select element: */
-.select__main::before,
-.select__main::after {
-  position: absolute;
-  content: "";
-  width: 8px;
-  height: 2px;
-  background-color: $base-primary;
-}
-
-.select__main::before {
-  transform: rotate(45deg);
-  top: 14px;
-  right: 15px;
-}
-
-.select__main::after {
-  transform: rotate(135deg);
-  top: 14px;
-  right: 10px;
-}
-
-/* Style arrow space */
-
 .select__main-text {
   width: 125px;
   white-space: nowrap;
@@ -55,13 +32,41 @@
   text-overflow: ellipsis;
 }
 
-/* Point the arrow upwards when the select box is open (active): */
-.select__main.select__main--active::before {
+/* Style the arrow inside the select element: */
+// .select__main::before,
+// .select__main::after {
+//   position: absolute;
+//   content: "";
+//   width: 8px;
+//   height: 2px;
+//   background-color: $base-primary;
+// }
+
+// .select__main::before {
+//   transform: rotate(45deg);
+//   top: 14px;
+//   right: 15px;
+// }
+
+// .select__main::after {
+//   transform: rotate(135deg);
+//   top: 14px;
+//   right: 10px;
+// }
+
+.select__main::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  top: 10px;
   right: 10px;
+  background: url("../../img/select/arrow-select.svg");
 }
 
-.select__main.select__main--active::after {
-  right: 15px;
+/* Point the arrow upwards when the select box is open (active): */
+.select__main.select__main--active::before {
+  transform: rotate(180deg);
 }
 
 /* style the items (options): */

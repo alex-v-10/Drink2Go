@@ -12,6 +12,7 @@
 
   @media (min-width: $desktop) {
     padding-top: 50px;
+    row-gap: 20px;
   }
 }
 
@@ -46,7 +47,7 @@
     }
 
     @media (min-width: $desktop) {
-      margin-top: -10px;
+      margin-top: -12px;
       padding-top: 0;
       flex-direction: column;
       justify-content: flex-start;
@@ -63,6 +64,18 @@
   }
 }
 
+.footer__item--contacts .footer__list-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.footer__item--contacts .footer__title {
+  margin-bottom: 20px;
+}
+
+.footer__item--contacts .footer__link {
+  text-transform: none;
+}
+
 .footer__logo {
   margin: 2px 0;
 
@@ -74,6 +87,8 @@
 .footer__description {
   @media (min-width: $desktop) {
     margin: 0 0 50px;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
@@ -101,10 +116,6 @@
   margin-bottom: 4px;
 }
 
-.footer__list--contacts .footer__list-item {
-  margin-bottom: 16px;
-}
-
 .footer__link {
   padding: 8px 0;
   display: block;
@@ -112,6 +123,7 @@
   letter-spacing: 0.02em;
   font-weight: 500;
   color: $base-black;
+  text-transform: uppercase;
 
   &:hover,
   &:focus-visible {

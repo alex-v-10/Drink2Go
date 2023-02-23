@@ -23,12 +23,6 @@
   }
 }
 
-.slide__title.title {
-  @media (min-width: $desktop) {
-    text-align: start;
-  }
-}
-
 .slide__title .title__text {
   font-size: 36px;
   line-height: 48px;
