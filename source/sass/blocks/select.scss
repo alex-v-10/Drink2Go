@@ -33,26 +33,6 @@
 }
 
 /* Style the arrow inside the select element: */
-// .select__main::before,
-// .select__main::after {
-//   position: absolute;
-//   content: "";
-//   width: 8px;
-//   height: 2px;
-//   background-color: $base-primary;
-// }
-
-// .select__main::before {
-//   transform: rotate(45deg);
-//   top: 14px;
-//   right: 15px;
-// }
-
-// .select__main::after {
-//   transform: rotate(135deg);
-//   top: 14px;
-//   right: 10px;
-// }
 
 .select__main::before {
   position: absolute;
