@@ -6,7 +6,7 @@ const LOCATION = {
 const VIEW_ZOOM = 18;
 
 const MAIN_PIN_ICON = L.icon({
-  iconUrl: '../img/map/map-pin.svg',
+  iconUrl: 'img/map/map-pin.svg',
   iconSize: [38, 50],
   iconAnchor: [18, 50],
 });
